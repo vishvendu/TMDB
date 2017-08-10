@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">TMDB</string>
+
+
+    //mainActivity string
+
+    <string name="Discover">Discover</string>
+    <string name="Movie">Movie</string>
+    <string name="TV">TV Show</string>
+    <string name="People">People</string>
+
+
 </resources>

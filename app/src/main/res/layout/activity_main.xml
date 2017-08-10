@@ -1,14 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+
+    android:paddingRight="@dimen/activity_horizontal_margin"
     tools:context="nseit.com.tmdb.MainActivity">
+
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardBackgroundColor="#ffffff"
+
+        card_view:cardElevation="5dp"
+        android:background="@color/white"
+        card_view:cardPreventCornerOverlap="true"
+        card_view:cardUseCompatPadding="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+         android:layout_gravity="center"
+            android:orientation="vertical"
+            android:weightSum="4"
+
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_weight="2">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:text="@string/Discover"
+                            android:textColor="@color/white"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/roundbuttonshape"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/TV"
+                            android:textColor="@color/white"
+                            android:background="@drawable/roundbuttonshape"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Movie"
+                            android:textColor="@color/white"
+                            android:background="@drawable/roundbuttonshape"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/People"
+                            android:textColor="@color/white"
+                            android:background="@drawable/roundbuttonshape"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+
+
+
 
 
 </RelativeLayout>
