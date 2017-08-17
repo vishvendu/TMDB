@@ -1,12 +1,14 @@
-package nseit.com.tmdb.Discover.RetroClient;
+package nseit.com.tmdb.Discover.model;
+
+/**
+ * Created by vishvendu on 14/8/17.
+ */
+
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-/**
- * Created by vishvendu on 11/8/17.
- */
 
-public class Discovermoviemodel {
+public class SOAnswersResponse {
 
     @SerializedName("page")
     @Expose
@@ -52,4 +54,5 @@ public class Discovermoviemodel {
     public void setResults(List<Result> results) {
         this.results = results;
     }
+
 }

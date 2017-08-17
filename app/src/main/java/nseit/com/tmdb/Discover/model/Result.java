@@ -1,7 +1,7 @@
-package nseit.com.tmdb.Discover.RetroClient;
+package nseit.com.tmdb.Discover.model;
 
 /**
- * Created by vishvendu on 11/8/17.
+ * Created by vishvendu on 14/8/17.
  */
 
 import java.util.List;

@@ -3,11 +3,17 @@ package nseit.com.tmdb.Discover.view;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import nseit.com.tmdb.Discover.presenter.DiscoverOnScreenView;
+import java.util.List;
+
+
+import nseit.com.tmdb.Discover.model.Result;
+import nseit.com.tmdb.Discover.presenter.IDiscoverOnScreenView;
 import nseit.com.tmdb.Discover.presenter.IMoviepresenter;
 import nseit.com.tmdb.Discover.presenter.MoviepresenterImpl;
 import nseit.com.tmdb.R;
@@ -15,10 +21,12 @@ import nseit.com.tmdb.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DiscoverMovieView extends Fragment implements DiscoverOnScreenView{
+public class DiscoverMovieView extends Fragment implements IDiscoverOnScreenView {
 
     private View v;
     private IMoviepresenter iMoviepresenter;
+    private RecyclerView recyclerView;
+    private DiscoverMovieAdapter discoverMovieAdapter;
 
     public DiscoverMovieView() {
 
@@ -44,6 +52,10 @@ public class DiscoverMovieView extends Fragment implements DiscoverOnScreenView{
 
 
         iMoviepresenter = new MoviepresenterImpl(this);
+        recyclerView = (RecyclerView) v.findViewById(R.id.discovermovielist);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL,false));
+        discoverMovieAdapter = new DiscoverMovieAdapter(getContext(),R.layout.discovermovieitems);
+        recyclerView.setAdapter(discoverMovieAdapter);
         iMoviepresenter.fetchMoviesDiscover();
 
     }
@@ -57,4 +69,14 @@ public class DiscoverMovieView extends Fragment implements DiscoverOnScreenView{
     public void hideProgress() {
 
     }
+
+    @Override
+    public void updateRecyclerView(List<Result> discoverResultList) {
+
+        discoverMovieAdapter.setDiscoverMovieResult(discoverResultList);
+        discoverMovieAdapter.notifyDataSetChanged();
+
+    }
+
+
 }
