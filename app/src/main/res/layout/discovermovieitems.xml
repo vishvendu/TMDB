@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:layout_marginLeft="@dimen/rightmargin"
+    android:layout_marginRight="@dimen/leftmargin"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -10,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         card_view:cardBackgroundColor="#ffffff"
-        card_view:cardElevation="10dp"
+
         android:background="@color/white"
         card_view:cardPreventCornerOverlap="true"
         card_view:cardUseCompatPadding="true"
@@ -26,21 +29,14 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
 
-                    card_view:cardElevation="10dp"
-                    android:background="@color/white"
-                    card_view:cardPreventCornerOverlap="true"
-
-                    >
                     <ImageView
                         android:layout_width="match_parent"
-                        android:src="@drawable/deadpool"
                         android:id="@+id/poster"
+                        android:layout_marginLeft="@dimen/twodp"
                         android:layout_height="match_parent" />
-                </android.support.v7.widget.CardView>
+
+
             </LinearLayout>
 
             <LinearLayout
@@ -91,7 +87,7 @@
                                         android:layout_marginLeft="10dp"
                                         android:layout_height="match_parent">
 
-                                        <TextView
+                                        <nseit.com.tmdb.Common.FontTypeFace
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
                                             android:text="Deadpool"
@@ -221,7 +217,7 @@
                                         android:orientation="horizontal"
                                         android:layout_height="match_parent">
 
-                                        <TextView
+                                        <nseit.com.tmdb.Common.FontTypeFace
                                             android:layout_width="match_parent"
                                             android:gravity="center"
                                             android:textSize="10dp"
@@ -245,18 +241,18 @@
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_weight="1.8"
-
+                        android:layout_weight="2"
+                        android:layout_marginBottom="10dp"
                         android:layout_marginLeft="10dp"
                         android:layout_height="0dp">
 
-                        <TextView
+                        <nseit.com.tmdb.Common.FontTypeFace
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:textSize="12dp"
                             android:id="@+id/description"
                             android:gravity="center|left"
-                            android:text="Based upon Marvel Comics’ most unconventional anti-hero, DEADPOOL tells the origin story of former Special Forces operative turned mercenary Wade Wilson, who after being subjected to a rogue experiment that leaves…"/>
+                            android:text="Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond."/>
 
 
                     </LinearLayout>

@@ -13,7 +13,6 @@ import java.util.List;
 
 
 import nseit.com.tmdb.Discover.model.Result;
-import nseit.com.tmdb.Discover.presenter.IDiscoverOnScreenView;
 import nseit.com.tmdb.Discover.presenter.IMoviepresenter;
 import nseit.com.tmdb.Discover.presenter.MoviepresenterImpl;
 import nseit.com.tmdb.R;
@@ -21,7 +20,7 @@ import nseit.com.tmdb.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DiscoverMovieView extends Fragment implements IDiscoverOnScreenView {
+public class DiscoverMovieView extends Fragment implements IDiscoverMovieView {
 
     private View v;
     private IMoviepresenter iMoviepresenter;

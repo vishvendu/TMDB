@@ -1,17 +1,15 @@
 package nseit.com.tmdb.Discover.presenter;
 
-import android.util.Log;
-
-import java.util.ArrayList;
 import java.util.List;
 
 import nseit.com.tmdb.Discover.RetroClient.ApiUtils;
 
 import nseit.com.tmdb.Discover.RetroClient.SOService;
-import nseit.com.tmdb.Discover.model.DiscoverMovieModel;
+import nseit.com.tmdb.Discover.model.IDiscoverMovieModel;
 import nseit.com.tmdb.Discover.model.DiscoverMovieModelImpl;
 import nseit.com.tmdb.Discover.model.Result;
 import nseit.com.tmdb.Discover.model.SOAnswersResponse;
+import nseit.com.tmdb.Discover.view.IDiscoverMovieView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -23,13 +21,13 @@ import retrofit2.Response;
 public class MoviepresenterImpl implements IMoviepresenter {
 
 
-    IDiscoverOnScreenView mDiscoverOnScreenView;
-    DiscoverMovieModel discoverMovieModel;
+    IDiscoverMovieView mDiscoverOnScreenView;
+    IDiscoverMovieModel discoverMovieModel;
     private SOService mService;
 
 
 
-    public MoviepresenterImpl(IDiscoverOnScreenView discoverMovieView) {
+    public MoviepresenterImpl(IDiscoverMovieView discoverMovieView) {
         this.mDiscoverOnScreenView = discoverMovieView;
         discoverMovieModel = new DiscoverMovieModelImpl(this);
         mService = ApiUtils.getSOService();
@@ -39,7 +37,7 @@ public class MoviepresenterImpl implements IMoviepresenter {
     public void fetchMoviesDiscover() {
 
 
-        mService.getAnswers().enqueue(new Callback<SOAnswersResponse>() {
+        mService.getDiscoverMovie().enqueue(new Callback<SOAnswersResponse>() {
             @Override
             public void onResponse(Call<SOAnswersResponse> call, Response<SOAnswersResponse> response) {
 
