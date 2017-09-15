@@ -1,17 +1,27 @@
 package nseit.com.tmdb.Discover.view;
 
 
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Movie;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.List;
 
 
+import nseit.com.tmdb.Common.FragmentManagerClass;
+import nseit.com.tmdb.Discover.ClickListner.RecyclerTouchListener;
+import nseit.com.tmdb.Discover.commondiscover.OnItemClickListner;
 import nseit.com.tmdb.Discover.model.Result;
 import nseit.com.tmdb.Discover.presenter.IMoviepresenter;
 import nseit.com.tmdb.Discover.presenter.MoviepresenterImpl;
@@ -26,6 +36,7 @@ public class DiscoverMovieView extends Fragment implements IDiscoverMovieView {
     private IMoviepresenter iMoviepresenter;
     private RecyclerView recyclerView;
     private DiscoverMovieAdapter discoverMovieAdapter;
+    private FragmentManager fragmentManager;
 
     public DiscoverMovieView() {
 
@@ -57,6 +68,7 @@ public class DiscoverMovieView extends Fragment implements IDiscoverMovieView {
         recyclerView.setAdapter(discoverMovieAdapter);
         iMoviepresenter.fetchMoviesDiscover();
 
+
     }
 
     @Override
@@ -70,12 +82,30 @@ public class DiscoverMovieView extends Fragment implements IDiscoverMovieView {
     }
 
     @Override
-    public void updateRecyclerView(List<Result> discoverResultList) {
+    public void updateRecyclerView(final List<Result> discoverResultList) {
 
         discoverMovieAdapter.setDiscoverMovieResult(discoverResultList);
         discoverMovieAdapter.notifyDataSetChanged();
+        recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getActivity(), recyclerView, new OnItemClickListner() {
+            @Override
+            public void onClick(View view, int position) {
+                Result result = discoverResultList.get(position);
+                Toast.makeText(getActivity(), result.getId() + " is selected!", Toast.LENGTH_SHORT).show();
 
+
+                Intent intent = new Intent(getActivity(), MovieDetailsView.class);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
     }
+
+
+
 
 
 }

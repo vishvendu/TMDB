@@ -14,4 +14,18 @@
         <item name="color">@color/colorPrimary</item>
     </style>
 
+
+    <style name="MyTabLayout" parent="Base.Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/MyTabTextAppearance</item>
+    </style>
+
+    <style name="MyTabTextAppearance" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">10sp</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="TabLayout_Theme" parent="@style/AppTheme">
+        <item name="android:singleLine">true</item>
+    </style>
+
 </resources>
