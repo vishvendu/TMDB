@@ -90,11 +90,8 @@ public class DiscoverMovieView extends Fragment implements IDiscoverMovieView {
             @Override
             public void onClick(View view, int position) {
                 Result result = discoverResultList.get(position);
-                Toast.makeText(getActivity(), result.getId() + " is selected!", Toast.LENGTH_SHORT).show();
-
-
-                Intent intent = new Intent(getActivity(), MovieDetailsView.class);
-                startActivity(intent);
+                startActivity(new Intent(getActivity(), MovieDetailsView.class)
+                        .putExtra("SelectedMovieID", result.getId()));
             }
 
             @Override
@@ -104,8 +101,12 @@ public class DiscoverMovieView extends Fragment implements IDiscoverMovieView {
         }));
     }
 
+    @Override
+    public void showMessage(String message) {
 
-
+        System.out.println("Item clicked");
+        Toast.makeText(getActivity(),"item clicked "+message,Toast.LENGTH_LONG).show();
+    }
 
 
 }

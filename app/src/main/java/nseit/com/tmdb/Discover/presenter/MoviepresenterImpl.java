@@ -62,6 +62,8 @@ public class MoviepresenterImpl implements IMoviepresenter {
         });
     }
 
+
+
     @Override
     public void updateRecyclerView(List<Result> discoverResultList) {
 

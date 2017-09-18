@@ -14,4 +14,5 @@ public interface IMoviepresenter {
 
     void updateRecyclerView(List<Result> list);
     void fetchMoviesDiscover();
+
 }

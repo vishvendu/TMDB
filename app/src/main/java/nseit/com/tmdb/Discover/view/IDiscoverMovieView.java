@@ -14,5 +14,6 @@ public interface IDiscoverMovieView {
     void showProgress();
     void hideProgress();
     void updateRecyclerView(List<Result> list);
+    void showMessage(String message);
 
 }

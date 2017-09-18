@@ -19,6 +19,5 @@ public interface SOService {
 
     @GET("discover/tv?api_key=3e404f811a7dfe8f0684bb62d6632ecf&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false")
     Call<SOTvShowResponse> getDiscoverTvShow();
-    /*@GET("/answers?order=desc&sort=activity&site=stackoverflow")
-    Call<Result> getAnswers(@Query("tagged") String tags);*/
+
 }

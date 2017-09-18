@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import nseit.com.tmdb.Discover.model.Result;
+import nseit.com.tmdb.Discover.presenter.IMoviepresenter;
 import nseit.com.tmdb.R;
 
 import static nseit.com.tmdb.Common.Constant.TMDB_BASEPOSTERURL;
@@ -25,12 +27,13 @@ import static nseit.com.tmdb.Common.Constant.TMDB_BASEPOSTERURL;
  * Created by vishvendu on 14/8/17.
  */
 
-public class DiscoverMovieAdapter extends RecyclerView.Adapter<DiscoverMovieAdapter.ViewHolder>{
+public class DiscoverMovieAdapter extends RecyclerView.Adapter<DiscoverMovieAdapter.ViewHolder> {
 
 
     private List<Result> discoverMovieResult;
     private Context mContext;
     private int itemLayout;
+    IMoviepresenter iMoviepresenter;
 
   /*  public DiscoverMovieAdapter(List<Result> discoverMovieResult, Context context, int itemLayout) {
         this.discoverMovieResult = discoverMovieResult;
@@ -70,7 +73,9 @@ public class DiscoverMovieAdapter extends RecyclerView.Adapter<DiscoverMovieAdap
         return discoverMovieResult.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+
+
+    public class ViewHolder extends RecyclerView.ViewHolder{
         TextView title;
         TextView rating;
         TextView description;
@@ -84,6 +89,8 @@ public class DiscoverMovieAdapter extends RecyclerView.Adapter<DiscoverMovieAdap
             description = (TextView)itemView.findViewById(R.id.description);
             posterView = (ImageView) itemView.findViewById(R.id.poster);
         }
+
+
     }
 
     public void setDiscoverMovieResult(List<Result> items) {

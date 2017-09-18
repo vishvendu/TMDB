@@ -15,19 +15,24 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import nseit.com.tmdb.Discover.commondiscover.MovieDeatilsPager;
 import nseit.com.tmdb.Discover.commondiscover.OnItemClickListner;
 import nseit.com.tmdb.Discover.commondiscover.Pager;
+import nseit.com.tmdb.Discover.presenter.IMovieDetailsPresenter;
+import nseit.com.tmdb.Discover.presenter.IMoviedetailsPresenterImpl;
 import nseit.com.tmdb.R;
 
 
-public class MovieDetailsView extends AppCompatActivity implements TabLayout.OnTabSelectedListener {
+public class MovieDetailsView extends AppCompatActivity implements IMovieDeatilsView,TabLayout.OnTabSelectedListener {
 
     private View v ;
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private MovieDeatilsPager adapter;
+    private int MovieId ;
+    private IMovieDetailsPresenter iMovieDetailsPresenter;
 
     public MovieDetailsView() {
         // Required empty public constructor
@@ -39,9 +44,27 @@ public class MovieDetailsView extends AppCompatActivity implements TabLayout.OnT
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_movie_details_view);
+        getIntentData();
         initView();
     }
 
+    private void getIntentData() {
+
+        MovieId = getIntent().getIntExtra("SelectedMovieID",0);
+
+
+    }
+    private void initView() {
+
+        viewPager = (ViewPager)findViewById(R.id.viewpager);
+        tabLayout = (TabLayout)findViewById(R.id.tabLayout);
+        iMovieDetailsPresenter = new IMoviedetailsPresenterImpl(this);
+
+        iMovieDetailsPresenter.loaddata(MovieId);
+
+        setUpViewPager(viewPager);
+
+    }
     private void setUpViewPager(ViewPager viewPager) {
 
         tabLayout.setupWithViewPager(viewPager);
@@ -66,25 +89,14 @@ public class MovieDetailsView extends AppCompatActivity implements TabLayout.OnT
 
     private void setupTabTexts() {
 
-
-
             tabLayout.getTabAt(0).setText("Info");
             tabLayout.getTabAt(1).setText("Characters");
             tabLayout.getTabAt(2).setText("Reviews");
             tabLayout.getTabAt(3).setText("Related");
 
-
-
-
     }
 
-    private void initView() {
 
-        viewPager = (ViewPager)findViewById(R.id.viewpager);
-        tabLayout = (TabLayout)findViewById(R.id.tabLayout);
-        setUpViewPager(viewPager);
-
-    }
 
 
     @Override
