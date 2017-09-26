@@ -4,10 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import nseit.com.tmdb.Common.FragmentManagerClass;
-import nseit.com.tmdb.Discover.view.DiscoverMovieView;
-import nseit.com.tmdb.Discover.view.DiscoverTvView;
-import nseit.com.tmdb.R;
+import nseit.com.tmdb.Discover.view.DiscoverMovieView.DiscoverMovieView;
+import nseit.com.tmdb.Discover.view.DiscoverTvViews.DiscoverTvView;
 
 /**
  * Created by vishvendu on 11/8/17.

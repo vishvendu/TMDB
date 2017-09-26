@@ -4,8 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import nseit.com.tmdb.Discover.view.DiscoverMovieView;
-import nseit.com.tmdb.Discover.view.DiscoverTvView;
+import nseit.com.tmdb.Discover.view.DiscoverMovieView.DiscoverMovieView;
+import nseit.com.tmdb.Discover.view.DiscoverTvViews.DiscoverTvView;
+import nseit.com.tmdb.Discover.view.MovieDetailsViews.MovieOverviewTab;
 
 /**
  * Created by vishvendu on 15/9/17.
@@ -32,7 +33,7 @@ public class MovieDeatilsPager extends FragmentStatePagerAdapter {
             case 0:
 
 
-                fragment = DiscoverMovieView.newInstance("FirstFragment, Instance 1");
+                fragment = MovieOverviewTab.newInstance("FirstFragment, Instance 1");
                 break;
 
             case 1:

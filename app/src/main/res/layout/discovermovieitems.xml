@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:app="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_marginLeft="@dimen/rightmargin"
     android:layout_marginRight="@dimen/leftmargin"
@@ -13,8 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         card_view:cardBackgroundColor="#ffffff"
-
-        android:background="@color/white"
         card_view:cardPreventCornerOverlap="true"
         card_view:cardUseCompatPadding="true"
         >
@@ -93,7 +91,9 @@
                                             android:text="Deadpool"
                                             android:id="@+id/title"
                                             android:gravity="start|center"
-                                            android:textSize="12dp"
+                                            android:textSize="14dp"
+                                            android:textColor="@color/darkblack"
+                                            app:typeface="roboto_bold"
                                             android:textStyle="bold"
                                             />
 
@@ -118,10 +118,12 @@
                                                 android:gravity="center|end"
                                                 android:layout_height="match_parent">
 
-                                                <TextView
+                                                <nseit.com.tmdb.Common.FontTypeFace
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
                                                     android:text="7.6"
+                                                    android:textColor="@color/darkblack"
+                                                    app:typeface="roboto_medium"
                                                     android:id="@+id/rating"
                                                     android:textStyle="bold"
                                                     android:textSize="12dp"/>
@@ -195,9 +197,11 @@
                                                 android:layout_weight="1.5"
 
                                                 android:layout_height="match_parent">
-                                                <TextView
+                                                <nseit.com.tmdb.Common.FontTypeFace
                                                     android:layout_width="match_parent"
                                                     android:gravity="center"
+                                                    app:typeface="roboto_regular"
+                                                    android:textColor="@color/darkblack"
                                                     android:id="@+id/releaseyear"
                                                     android:layout_height="match_parent"
                                                     android:text="2016"/>
@@ -222,6 +226,8 @@
                                             android:gravity="center"
                                             android:textSize="10dp"
                                             android:id="@+id/gener"
+                                            android:textColor="@color/TextColor"
+                                            app:typeface="roboto_medium"
                                             android:layout_height="match_parent"
                                             android:text="Action, Adventure, Comedy, Romance"/>
 
@@ -250,6 +256,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:textSize="12dp"
+                            app:typeface="roboto_regular"
+                            android:textColor="@color/darkblack"
                             android:id="@+id/description"
                             android:gravity="center|left"
                             android:text="Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond."/>

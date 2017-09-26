@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="nseit.com.tmdb.Discover.view.DiscoverTvView">
+    tools:context="nseit.com.tmdb.Discover.view.DiscoverTvViews.DiscoverTvView">
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"

@@ -1,0 +1,306 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+    android:layout_height="match_parent"
+    tools:context="nseit.com.tmdb.Discover.view.MovieDetailsViews.MovieOverviewTab">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="0dp"
+        app:cardElevation="5dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="wrap"
+        android:layout_gravity="center"
+        app:cardCornerRadius="5dp"
+        card_view:cardPreventCornerOverlap="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintVertical_bias="0.525"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/direct_user" />
+
+            <nseit.com.tmdb.Common.FontTypeFace
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="Director"
+                android:textSize="14dp"
+                app:typeface="roboto_bold"
+                android:textColor="@color/TextColor"
+                app:layout_constraintLeft_toRightOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                app:srcCompat="@drawable/user" />
+
+            <nseit.com.tmdb.Common.FontTypeFace
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Producer"
+                app:typeface="roboto_bold"
+                android:textSize="14dp"
+                android:textColor="@color/TextColor"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                app:layout_constraintLeft_toRightOf="@+id/imageView4"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4"
+                app:srcCompat="@drawable/writer" />
+
+            <nseit.com.tmdb.Common.FontTypeFace
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:textSize="14dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Writer"
+                app:typeface="roboto_bold"
+                android:textColor="@color/TextColor"
+                app:layout_constraintLeft_toRightOf="@+id/imageView5"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                android:layout_marginBottom="0dp" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5"
+                app:srcCompat="@drawable/details" />
+
+            <nseit.com.tmdb.Common.FontTypeFace
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:textSize="14dp"
+                app:typeface="roboto_bold"
+                android:text="Overview"
+                android:textColor="@color/TextColor"
+                app:layout_constraintLeft_toRightOf="@+id/imageView6"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+                android:layout_marginBottom="0dp" />
+
+            <nseit.com.tmdb.Common.FontTypeFace
+                android:id="@+id/movieoverview"
+                android:layout_width="170dp"
+                android:ellipsize="marquee"
+                android:lines="20"
+                android:layout_height="0dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:text="Light years from Earth, 26 years after being abducted, Peter Quill finds himself the prime target of a manhunt after discovering an orb wanted by Ronan the Accuser"
+                android:textColor="@color/TextColor"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10"
+                app:layout_constraintVertical_bias="0.0"
+                app:typeface="roboto_regular"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintHorizontal_bias="0.0" />
+
+            <nseit.com.tmdb.Common.FontTypeFace
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                app:typeface="roboto_regular"
+                android:textSize="12dp"
+                android:text="James Gunn"
+                android:textColor="@color/TextColor"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/textView6"
+                app:layout_constraintVertical_bias="0.333"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintLeft_toLeftOf="@+id/textView6" />
+
+            <nseit.com.tmdb.Common.FontTypeFace
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                app:typeface="roboto_regular"
+                android:textSize="12dp"
+                android:text="Kevin Feige"
+
+                android:textColor="@color/TextColor"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                app:layout_constraintVertical_bias="0.6"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="@+id/textView8"
+                app:layout_constraintHorizontal_bias="0.518" />
+
+            <nseit.com.tmdb.Common.FontTypeFace
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginStart="36dp"
+                app:typeface="roboto_regular"
+                android:textSize="12dp"
+                android:text="Tim Grierson"
+                android:textColor="@color/TextColor"
+                android:layout_marginLeft="36dp"
+                app:layout_constraintLeft_toLeftOf="@+id/textView9"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintHorizontal_bias="0.45"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                android:layout_marginEnd="8dp" />
+
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="344dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/dotted"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Action"
+                android:padding="10dp"
+                android:textSize="10dp"
+                android:background="@drawable/border"
+                android:textColor="@color/white"
+                android:layout_marginTop="44dp"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintLeft_toRightOf="@+id/movieoverview" />
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comedy"
+                android:textSize="10dp"
+                android:padding="10dp"
+                android:background="@drawable/border"
+                android:textColor="@color/white"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintLeft_toRightOf="@+id/movieoverview"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintBottom_toBottomOf="@+id/textView0"
+                android:layout_marginBottom="0dp"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Adventure"
+                android:textSize="10dp"
+                android:padding="10dp"
+                android:background="@drawable/border"
+                android:textColor="@color/white"
+                android:layout_marginBottom="17dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView0"
+                app:layout_constraintLeft_toRightOf="@+id/textView"
+                android:layout_marginLeft="16dp" />
+
+            <TextView
+                android:id="@+id/textView0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sci-Fiction"
+                android:textSize="10dp"
+                android:padding="10dp"
+                android:background="@drawable/border"
+                android:textColor="@color/white"
+                android:layout_marginTop="17dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintLeft_toRightOf="@+id/textView5"
+                android:layout_marginLeft="16dp" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

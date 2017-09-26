@@ -2,10 +2,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toolbar"
-    android:layout_height="wrap_content"
+    android:layout_height="46dp"
     android:layout_width="match_parent"
     android:fitsSystemWindows="true"
-    app:titleTextColor="@color/colorPrimary"
+    app:titleTextColor="@color/TextColor"
     android:minHeight="?attr/actionBarSize"
     app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     >
@@ -17,6 +17,6 @@
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:layout_gravity="left"
-        android:padding="@dimen/leftmargin"
-        android:src="@drawable/leftarrow" />
+
+        android:src="@drawable/backarrowpint" />
 </android.support.v7.widget.Toolbar>
